@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To My Beylade 💌</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffe6e6, #ffe0f0);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    h1 {
+      color: #b30059;
+      margin-top: 100px;
+      animation: fadeIn 2s ease;
+    }
+
+    p {
+      animation: fadeIn 2s ease 1s forwards;
+      opacity: 0;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #ff3399;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: background 0.3s;
+      animation: fadeIn 2s ease 2s forwards;
+      opacity: 0;
+    }
+
+    button:hover {
+      background-color: #cc0066;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 5% auto;
+      padding: 30px;
+      border-radius: 15px;
+      width: 80%;
+      max-height: 70vh;
+      overflow-y: auto;
+      color: #333;
+      text-align: left;
+      white-space: pre-wrap;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      animation: popUp 0.5s ease-out;
+    }
+
+    .close {
+      color: #ff3399;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #cc0066;
+    }
+
+    #letterText {
+      font-size: 16px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    @keyframes floatHeart {
+      0% {transform: translateY(0);}
+      100% {transform: translateY(-100vh);}
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes popUp {
+      0% {transform: scale(0.7); opacity: 0;}
+      100% {transform: scale(1); opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mp3">
+  </audio>
+
+  <div class="hearts" id="hearts"></div>
+
+  <h1>Hi Beylade 💖</h1>
+  <p>I have something special for you...</p>
+  <button id="openLetter">Read Now</button>
+
+  <div id="loveModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <p id="letterText"></p>
+      <button id="readAgain" style="display:none;">Read Again</button>
+    </div>
+  </div>
+
+  <script>
+    const letter = `Dear Beylade,
+
+
+
+Congratulations sa ating dalawa dahil matagumpay nating nalampasan ang dalawang taon ng senior high school nang magkasama. Sa kabila ng napakaraming pagsubok at hamon na hinarap natin, nandito pa rin tayo—matatag at magkasama.
+
+Una sa lahat, nagpapasalamat ako sa Panginoong Diyos sa Kanyang walang sawang paggabay sa atin. Hindi natin mararating ito kung wala tayong pananampalataya sa Kanya.
+
+Pangalawa, maraming salamat sa’yo, mahal. Dahil sa’yo, mas nahubog ang pananaw ko sa buhay, lalo na pagdating sa pag-aaral at sa pagmamahal sa mga bagay na mahalaga. Ang dami kong natutunan mula sa’yo, at masaya ako dahil sa kabila ng lahat ng hirap at sakit na naidulot ko, nananatili ka pa ring nandiyan—nagmamahal, umuunawa, at nag-aalaga.
+
+Naalala ko pa noong muntik na akong magtampo sa’yo dahil mas inuuna mo ang trabaho mo kaysa sa akin. Noon, hindi ko iyon naintindihan, pero ngayon alam ko na ginagawa mo lang iyon para makatulong at makamit ang mga pangarap mo. Pasensya na rin kung minsan hindi ako nakikinig o nagsasabi ng totoo. Aaminin ko, minsan parang hindi ako karapat-dapat pagkatiwalaan, pero patuloy akong magsusumikap para mapatunayan sa’yo kung gaano kita kamahal.
+
+Alam kong minsan naiisip mong pareho ako sa ibang lalaking nagchecheat na, pero pangako ko—hindi ako ganun. Hindi ko kailanman pipiliing saktan ka o ipagpalit ka. Kahit ano pa ang mangyari—maging palaka man tayo, alien, hayop, o maging bagay pa—ikaw at ikaw pa rin ang pipiliin ng puso ko.
+
+Napakaswerte ko na ikaw ang naging parte ng buhay ko. Lahat ay gagawin ko para sa’yo. Ako ang magiging number one supporter mo, protector, kakampi, pamilya, at kahit minsan ay kaaway. (At oo, joke lang yung "asawa" pero sino bang nakakaalam? XD)
+
+
+Naalala ko pa noong unang beses nating naranasan ang physical closeness—fiesta sa Lodlod 'yon. Ang saya at ang kilig na naramdaman ko noon, sobrang gaan sa pakiramdam. Doon ko naramdaman na ang puso ko ay nahanap ang kapayapaan sa piling mo. Kapag ngumingiti ka at lumalabas ang mga dimples mo, tapos yung mga mata mong parang mga bituin sa langit… grabe. Ang ganda-ganda mo. Sobra. Para ka nang pang-Miss Universe. Ang swerte ko sa’yo, mahal. Sobrang sobra. Simula nang dumating ka sa buhay ko, hindi ka lang basta crush o pampagaan ng araw ko—ikaw ang naging mundo at tahanan ko. Sa’yo ako uuwi, sa’yo ako lalapit, lalo na kapag ako ay talo at pagod sa buhay.
+
+Ikaw ang dahilan kung bakit nagpatuloy ako sa laban, kahit pa pakiramdam ko ay wala na akong halaga o pag-asa. Binago mo ang pananaw ko sa lahat—at dahil diyan, sobrang nagpapasalamat ako sa’yo. Isa kang biyaya na ipinagkaloob sa akin ni Lord.
+
+Proud na proud ako sa’yo, mahal, sa pagtatapos mo bilang top sa buong campus. At ako naman, bilang Best Programmer—hindi para magyabang, kundi dahil alam ko na pinaghirapan natin ‘to, at deserve natin pareho ang lahat ng natanggap natin. Pero alam natin na simula pa lang ito. Mas marami pa tayong haharapin, pero alam kong kaya natin basta’t magkasama.
+
+Aaminin ko, natatakot ako. Natatakot ako na baka kung mawala ka, hindi na ako mag-grow. Pero pipilitin ko. Basta’t huwag ka lang mawawala, kasi mahal na mahal kita.
+
+Alam ko habang binabasa mo 'to, baka naiiyak ka na—pero ayos lang 'yan, kasi ako rin halos maiyak habang sinusulat ko ito. Hindi ko lang masabi sa’yo ng direkta, kaya isinulat ko na lang bilang sorpresa.
+
+
+
+Sinulat ko ang liham na ito hindi lang para batiin tayo sa ating graduation, kundi bilang pasasalamat at appreciation ko sa’yo bilang girlfriend ko. Ikaw ang naging gabay ko sa dalawang taon ng senior high school.
+
+Sana mas lalo pa tayong mag-grow nang magkasama. At sana, makayakap at makapag-cuddle ulit tayo, kasi miss na miss na talaga kita.
+
+I love you so much, mahal. Mwah!
+
+Love,
+Your Best Programmer 💻❤️`;
+
+    const openBtn = document.getElementById("openLetter");
+    const modal = document.getElementById("loveModal");
+    const closeBtn = document.getElementById("closeModal");
+    const textContainer = document.getElementById("letterText");
+    const readAgainBtn = document.getElementById("readAgain");
+
+    let typingTimer;
+    function typeText(text, speed = 25) {
+      let i = 0;
+      textContainer.innerHTML = "";
+      readAgainBtn.style.display = "none";
+
+      typingTimer = setInterval(() => {
+        if (i < text.length) {
+          textContainer.innerHTML += text.charAt(i);
+          i++;
+        } else {
+          clearInterval(typingTimer);
+          readAgainBtn.style.display = "inline-block";
+        }
+      }, speed);
+    }
+
+    openBtn.onclick = () => {
+      modal.style.display = "block";
+      typeText(letter);
+    };
+
+    closeBtn.onclick = () => {
+      modal.style.display = "none";
+      clearInterval(typingTimer);
+    };
+
+    readAgainBtn.onclick = () => {
+      typeText(letter);
+    };
+
+    window.onclick = (event) => {
+      if (event.target == modal) {
+        modal.style.display = "none";
+        clearInterval(typingTimer);
+      }
+    };
+
+    // Hearts animation
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.innerHTML = "❤️";
+      heart.style.position = "absolute";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.top = "100vh";
+      heart.style.fontSize = Math.random() * 20 + 20 + "px";
+      heart.style.animation = "floatHeart 5s linear infinite";
+      document.getElementById("hearts").appendChild(heart);
+
+      setTimeout(() => heart.remove(), 5000);
+    }
+    setInterval(createHeart, 300);
+  </script>
+
+</body>
+</html>
